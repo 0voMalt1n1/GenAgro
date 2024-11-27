@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HomeStyle/BoxEstoque.css">
+    <link rel="stylesheet" href="HomeStyle/BoxGerForm.css">
+    <link rel="stylesheet" href="HomeStyle/BoxFornecedor.css">
+    <link rel="stylesheet" href="HomeStyle/BoxMain.css">
+    <link rel="stylesheet" href="HomeStyle/StyleNavbar.css">
+    <link rel="stylesheet" href="HomeStyle/HomeStyle.css">
+    <title>Bem Vindo!</title>
+</head>
+
+<body>
+
+    <nav class="NavBar">
+        <button class="btnFornecedor" id="btnFornecedor">Fornecedores</button>
+        <button class="btnGerForm" id="btnGerForm">Gerênciar Formulário</button>
+        <button class="btnEstoque" id="btnEstoque">Estoque</button>
+    </nav>
+
+    <div class="BoxMain" id="BoxMain">
+
+        <div class="btnCloseBP" id="btnCloseBP">X</div>
+
+        <div class="BoxFornecedor" id="BoxFornecedor">
+            <header>
+                <span>Fornecedores</span>
+                <button class="btnNewFornecedor" id="btnNewFornecedor">Incluir</button>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-Mail</th>
+                        <th>Telefone</th>
+
+                        <th class="action">Editar</th>
+                        <th class="action">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="NewFornecedor" id="NewFornecedor">
+                <div class="modal">
+                    <form id="fornecedorForm">
+                        <label for="nmFornecedor">Nome</label>
+                        <input id="nmFornecedor" type="text" required />
+
+                        <label for="emFornecedor">E-Mail</label>
+                        <input id="emFornecedor" type="text" required />
+
+                        <label for="tlFornecedor">Telefone</label>
+                        <input id="tlFornecedor" type="text" required />
+
+                        <button class="btnSalvar" id="btnSalvar">Salvar</button>
+                    </form>
+                    <button class="btnFecharFornecedor" id="btnFecharFornecedor">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="BoxGerForm">
+            <header>
+                <span>Gerenciamento de formulário</span>
+                <button class="btnIncPdCompra" id="btnIncPdCompra">Incluir</button>
+                <button class="btnIncPlAtiva" id="btnIncPlAtiva">Incluir</button>
+                <button class="btnVoltar" id="btnVoltar">Voltar</button>
+            </header>
+
+            <div class="btnsNavBar">
+                <button class="btnPdCompra" id="btnPdCompra">Produtos para compra</button>
+                <button class="btnPlAtiva" id="btnPlAtiva">Plantações Ativas</button>
+            </div>
+
+            <div class="boxPdCompra" id="boxPdCompra">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>valor</th>
+                            <th class="action">Editar</th>
+                            <th class="action">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pdcompraTabelaBody">
+                    </tbody>
+                </table>
+                <div class="boxNewPdCompra" id="boxNewPdCompra">
+                    <div class="modal">
+                        <form id="pdcompraForm">
+                            <label for="nmPdcompra">Nome</label>
+                            <input id="nmPdcompra" type="text" required />
+
+                            <label for="vlPdcompra">Valor</label>
+                            <input id="vlPdcompra" type="text" required />
+
+                            <button class="btnSalvarPdCompra" id="btnSalvarPdCompra">Salvar</button>
+                        </form>
+                        <button class="btnFecharPdCompra" id="btnFecharPdCompra">Fechar</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="boxPlAtiva" id="boxPlAtiva">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Data - Cultivo</th>
+                            <th>Data - Colheita</th>
+
+                            <th class="action">Editar</th>
+                            <th class="action">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="plativaTabelaBody">
+                    </tbody>
+                </table>
+                <div class="boxNewPlAtiva" id="boxNewPlAtiva">
+                    <div class="modal">
+                        <form id="plativaForm">
+                            <label for="nmPlativa">Nome da planta</label>
+                            <input id="nmPlativa" type="text" required />
+                            
+                            <label for="tpPlativa">Tipo</label>
+                            <input id="tpPlativa" type="text" required />
+
+                            <label for="dtCultivo">Data de Cultivo</label>
+                            <input id="dtCultivo" type="date" required />
+
+                            <label for="dtColheita">Data de Colheita</label>
+                            <input id="dtColheita" type="date" required />
+
+                            <button class="btnSalvarPlAtiva" id="btnSalvarPlAtiva">Salvar</button>
+                        </form>
+                        <button class="btnFecharPlAtiva" id="btnFecharPlAtiva">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="BoxEstoque">
+            <header>
+                <span>Estoque</span>
+                <button class="btnNewEstoque" id="btnNewEstoque">Incluir</button>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th class="action">Editar</th>
+                        <th class="action">Excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="estoqueTabelaBody">
+                </tbody>
+            </table>
+            <div class="NewEstoque" id="NewEstoque">
+                <div class="modal">
+                    <form id="estoqueForm">
+                        <label for="nmProduto">Nome</label>
+                        <input id="nmProduto" type="text" required />
+
+                        <label for="qtProduto">Quatidade</label>
+                        <input id="qtProduto" type="text" required />
+
+                        <button class="btnSalvarEstoque" id="btnSalvarEstoque">Salvar</button>
+                    </form>
+                    <button class="btnFecharEstoque" id="btnFecharEstoque">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="HomeStyleScript/StyleNavbarScript.js"></script>
+<script src="HomeStyleScript/BoxFornecedorscript.js"></script>
+<script src="HomeStyleScript/BoxEstoqueScript.js"></script>
+<script src="HomeStyleScript/BoxGerFormScript.js"></script>
+
+<script src="HomeScript/ScriptFornecedor.js"></script>
+<script src="HomeScript/ScriptEstoque.js"></script>
+<script src="HomeScript/ScriptPdCompra.js"></script>
+<script src="HomeScript/ScriptPlativa.js"></script>
+
+</html>

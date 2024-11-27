@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, rgb(110, 110, 110), rgb(92, 90, 100));
+    background-size: cover;
+    background-position: center;
+}
+
+#BoxMain {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    transition: heigth .5s ease;
+    overflow: hidden;
+}
+
+#BoxMain.on {
+    height: 460px;
+}
+
+#BoxMain .FormBox {
+    width: 100%;
+    padding: 40px;
+}
+
+#BoxMain .FormBox.BoxLogin {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+#BoxMain.on .FormBox.BoxLogin {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+#BoxMain .FormBox.BoxRegister {
+    position: absolute;
+    transform: translateX(-400px);
+    transition: none;
+}
+
+#BoxMain.on .FormBox.BoxRegister {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.FormBox h2 {
+    font-size: 2em;
+    color: aliceblue;
+    text-align: center;
+}
+
+.InputBox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid aliceblue;
+    margin: 30px 0;
+}
+
+.InputBox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: aliceblue;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.InputBox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.InputBox input:focus~label,
+.InputBox input:valid~label {
+    top: -5px;
+}
+
+.VltLoginLink {
+    font-size: .9em;
+    color: aliceblue;
+    font-weight: 500;
+    margin: -15px 0 15px;
+}
+
+.RegisterLink {
+    font-size: .9em;
+    color: aliceblue;
+    font-weight: 500;
+    margin: -15px 0 15px;
+}
+
+.btnLogin {
+    cursor: pointer;
+    color: rgb(110, 110, 110), rgb(92, 90, 100);
+    background: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    width: 100%;
+    height: 40px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: .5s;
+}
+.btnLogin:hover {
+    height: 43px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+
+.btnRegister {
+    cursor: pointer;
+    color: rgb(110, 110, 110), rgb(92, 90, 100);
+    background: aliceblue;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    width: 100%;
+    height: 40px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: .5s;
+}
+.btnRegister:hover {
+    height: 43px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+}
+
+.register-voltar{
+    font-size: .9em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+

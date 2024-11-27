@@ -1,0 +1,158 @@
+.BoxGerForm {
+    background: transparent;
+    position: static;
+    display: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.BoxGerForm.on {
+    display: block;
+}
+
+.BoxGerForm::-webkit-scrollbar {
+    width: 12px;
+    background-color: #49474781;
+}
+
+.BoxGerForm::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #49474781;
+}
+
+.BoxGerForm header button {
+    background: transparent;
+    border: none;
+    display: none;
+    width: 80px;
+    height: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-right: 50px;
+    padding: 5px;
+    font-size: 15px;
+    transition: .5s;
+}
+.BoxGerForm header button:hover{
+    background-color: #494747a4;
+    box-shadow: 0 3px 15px rgb(61, 61, 61);
+    width: 85px;
+    height: 35px;
+}
+
+.BoxGerForm header button.btnVoltar.on {
+    display: block;
+}
+
+.btnsNavBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    gap: 20px;
+}
+
+.btnsNavBar.on {
+    display: none;
+}
+
+.btnsNavBar button {
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 15px rgb(0, 0, 0, .5);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin: 0;
+    transition: .5s;
+}
+
+.btnsNavBar button:hover {
+    background-color: #494747a4;
+    font-size: 1.09em;
+    width: 210px;
+    height: 55px;
+}
+
+/*btões para incluir itens as respectivas tabelas!*/
+
+#btnIncPdCompra {
+    display: none;
+}
+
+#btnIncPdCompra.on {
+    display: block;
+}
+
+#btnIncEstoque {
+    display: none;
+}
+
+#btnIncEstoque.on {
+    display: block;
+}
+
+#btnIncPlAtiva {
+    display: none;
+}
+
+#btnIncPlAtiva.on {
+    display: block;
+}
+
+/*Produtos para compra*/
+
+#boxPdCompra {
+    display: none;
+}
+
+#boxPdCompra.on {
+    display: block;
+}
+
+#boxNewPdCompra {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#boxNewPdCompra.on{
+    display: flex;
+}
+
+
+/*Plantações ativas*/
+
+#boxPlAtiva {
+    display: none;
+}
+
+#boxPlAtiva.on{
+    display: block;
+}
+
+#boxNewPlAtiva {
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#boxNewPlAtiva.on {
+    display: flex;
+}

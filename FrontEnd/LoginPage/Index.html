@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAgro</title>
+    <link rel="stylesheet" href="LoginStyle/StyleLogin.css">
+</head>
+
+<body>
+    <div class="BoxMain" id="BoxMain">
+        <div class="FormBox BoxLogin">
+            <H2>Login</H2>
+            <form id="LoginForm">
+                <div class="InputBox">
+                    <input type="text" id="lg-user">
+                    <label>Usuário</label>
+                </div>
+                <div class="InputBox">
+                    <input type="password" id="lg-password">
+                    <label>senha</label>
+                </div>
+                <button class="btnLogin">Entrar</button>
+                <div class="register-voltar">
+                    <p>
+                        Não possui uma conta?
+                        <a href="#" class="RegisterLink" id="RegisterLink">Click Aqui!</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="FormBox BoxRegister">
+            <h2>Register</h2>
+            <form id="RegisterForm">
+                <div class="InputBox">
+                    <input type="text" name="rg-user" id="rg-user" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="InputBox">
+                    <input type="email" name="rg-email" id="rg-email" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="InputBox">
+                    <input type="password" name="rg-senha" id="rg-senha" required>
+                    <label>Senha</label>
+                </div>
+                <button class="btnRegister">Registrar-se</button>
+                <div class="register-voltar">
+                    <p>Já possui uma conta?
+                        <a href="#" class="VltLoginLink">Voltar</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="LoginStyle/StyleLogin.css"></script>
+<script src="LoginStyle/StyleLogin.js"></script>
+<script src="scriptLogin.js"></script>
+<script src="scriptRegister.js"></script>
+</html>
